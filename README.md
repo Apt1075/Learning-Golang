@@ -1,6 +1,6 @@
 # Learning Go (Golang) — Core Concepts & Fundamentals
 
-Welcome to my Go (Golang) learning repository! This project serves as a structured collection of Go programs designed to practice and demonstrate the core fundamentals of the language. It covers basic syntax, variables, user input, custom packages, control flow, data structures, and error handling.
+Welcome to my Go (Golang) learning repository! This project serves as a structured collection of Go programs designed to practice and demonstrate the core fundamentals of the language. It covers basic syntax, variables, user input, custom packages, control flow, loops, data structures, and error handling.
 
 ---
 
@@ -15,10 +15,14 @@ The project is structured as follows:
     *   [`ifelse/main.go`](file:///d:/Go-Lang/ifelse/main.go) — Examples of conditional statements (`if`, `else if`, `else`), including inline variable initialization statements.
 *   **`switchCase/`**
     *   [`switchCase/main.go`](file:///d:/Go-Lang/switchCase/main.go) — Examples of `switch` statements for control flow.
+*   **`forloop/`**
+    *   [`forloop/main.go`](file:///d:/Go-Lang/forloop/main.go) — A deep dive into Go's loop control structures (standard `for` loops, while-style, infinite loops with `break`, iterating over arrays/slices with `range`, nested loops, and loop control with `continue`).
 *   **`array/`**
     *   [`array/main.go`](file:///d:/Go-Lang/array/main.go) — Basic array syntax, length declaration, indexing, and array type formatting.
 *   **`slice/`**
     *   [`slice/main.go`](file:///d:/Go-Lang/slice/main.go) — Working with slices, checking capacity (`cap()`) and length (`len()`), dynamically adding elements via `append()`, using variadic append (`append(s1, s2...)`), and creating slices with `make()`.
+*   **`maps/`**
+    *   [`maps/main.go`](file:///d:/Go-Lang/maps/main.go) — Basic maps setup using `make(map[keyType]valueType)`, key insertion/updates, and key-existence check using the "comma-ok" idiom (`value, exists := myMap[key]`).
 *   **`error_handling/`**
     *   [`error_handling/main.go`](file:///d:/Go-Lang/error_handling/main.go) — Custom error creation (`fmt.Errorf`), returning errors alongside results (multiple returns), and handling them using idiomatic `if err != nil` patterns.
 *   **`test/`**
@@ -52,7 +56,15 @@ In [`func/main.go`](file:///d:/Go-Lang/func/main.go), several types of functions
 *   **If-Else (`ifelse/`):** Idiomatic conditional structures including variables initialized directly within the `if` statement block (scope-restricted variables).
 *   **Switch-Case (`switchCase/`):** Conditional branching using cleanly structured `switch` blocks and default statements.
 
-### 5. Arrays and Slices
+### 5. Loop Operations (`forloop/`)
+Go features a single looping construct—the `for` loop—which we use to implement:
+*   **Standard Counter Loop:** `for i := 1; i <= 5; i++`
+*   **While-Style Loop:** `for condition`
+*   **Infinite Loop:** `for { ... }` combined with `break`
+*   **Range Loops (For-Each):** Iterating over arrays and slices with `for index, value := range collection`
+*   **Loop Modifiers:** Skipping iterations with `continue` and breaking loops with `break`
+
+### 6. Arrays and Slices
 *   **Arrays (`array/`):** Fixed-size collections of homogeneous elements (e.g., `[5]int`).
 *   **Slices (`slice/`):** Dynamic, flexible views into arrays. Topics include:
     *   Getting length (`len`) and capacity (`cap`).
@@ -60,7 +72,16 @@ In [`func/main.go`](file:///d:/Go-Lang/func/main.go), several types of functions
     *   Concatenating two slices with the variadic `...` operator.
     *   Pre-allocating slice memory using the `make()` function.
 
-### 6. Error Handling
+### 7. Maps (`maps/`)
+Go's built-in hash table data structure. Topics include:
+*   Initializing maps with `make(map[KeyType]ValueType)`.
+*   Setting and updating key-value pairs.
+*   Checking for the existence of keys using the double-value assignment pattern:
+    ```go
+    value, key_exists := StudentName[key]
+    ```
+
+### 8. Error Handling
 In [`error_handling/main.go`](file:///d:/Go-Lang/error_handling/main.go):
 *   Implementing idiomatic Go error handling.
 *   Returning an `error` interface as the last return value from a function.
@@ -83,24 +104,22 @@ You can run any of the specific sections by navigating to their directories or p
 go run main.go
 ```
 
-### Functions
+### Functions & Error Handling
 ```bash
 go run ./func/main.go
+go run ./error_handling/main.go
 ```
 
-### Control Flow Examples
+### Control Flow & Loops
 ```bash
 go run ./ifelse/main.go
 go run ./switchCase/main.go
+go run ./forloop/main.go
 ```
 
-### Data Structures (Arrays & Slices)
+### Data Structures (Arrays, Slices & Maps)
 ```bash
 go run ./array/main.go
 go run ./slice/main.go
-```
-
-### Error Handling
-```bash
-go run ./error_handling/main.go
+go run ./maps/main.go
 ```
