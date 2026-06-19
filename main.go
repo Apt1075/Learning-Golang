@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func main_old() {
 	// fmt.Println("Hello Word")
 	// test.Helloworld()
 

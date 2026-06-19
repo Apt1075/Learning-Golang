@@ -27,6 +27,12 @@ The project is structured as follows:
     *   [`error_handling/main.go`](file:///d:/Go-Lang/error_handling/main.go) — Custom error creation (`fmt.Errorf`), returning errors alongside results (multiple returns), and handling them using idiomatic `if err != nil` patterns.
 *   **`test/`**
     *   [`test/test.go`](file:///d:/Go-Lang/test/test.go) — A basic demonstration of creating and referencing custom packages/modules in Go.
+*   **`EvenOROddNumber/`**
+    *   [`EvenOROddNumber/Even_or_Odd_number.go`](file:///d:/Go-Lang/EvenOROddNumber/Even_or_Odd_number.go) — Program to check whether a given number is even or odd.
+*   **`PositiveAndNegativeNumber/`**
+    *   [`PositiveAndNegativeNumber/Positive_or_Negative_number.go`](file:///d:/Go-Lang/PositiveAndNegativeNumber/Positive_or_Negative_number.go) — Program to check whether a given number is positive, negative, or zero.
+*   **`SumofFirstNNaturalNumbers/`**
+    *   [`SumofFirstNNaturalNumbers/SumofFirstNNaturalNumbers.go`](file:///d:/Go-Lang/SumofFirstNNaturalNumbers/SumofFirstNNaturalNumbers.go) — Program to calculate the sum of the first N natural numbers.
 *   **`go.mod`** — The module definition file.
 
 ---
@@ -88,6 +94,12 @@ In [`error_handling/main.go`](file:///d:/Go-Lang/error_handling/main.go):
 *   Creating formatted errors using `fmt.Errorf`.
 *   Writing robust code to prevent runtime panics by validating function execution outputs.
 
+### 9. Basic Logic & Math Programs
+Practice problems demonstrating conditionals and loops:
+*   **Even or Odd:** [`EvenOROddNumber/Even_or_Odd_number.go`](file:///d:/Go-Lang/EvenOROddNumber/Even_or_Odd_number.go)
+*   **Positive or Negative:** [`PositiveAndNegativeNumber/Positive_or_Negative_number.go`](file:///d:/Go-Lang/PositiveAndNegativeNumber/Positive_or_Negative_number.go)
+*   **Sum of First N Natural Numbers:** [`SumofFirstNNaturalNumbers/SumofFirstNNaturalNumbers.go`](file:///d:/Go-Lang/SumofFirstNNaturalNumbers/SumofFirstNNaturalNumbers.go)
+
 ---
 
 ## 🚀 How to Run the Programs
@@ -122,4 +134,11 @@ go run ./forloop/main.go
 go run ./array/main.go
 go run ./slice/main.go
 go run ./maps/main.go
+```
+
+### Basic Logic & Math Programs
+```bash
+go run ./EvenOROddNumber/Even_or_Odd_number.go
+go run ./PositiveAndNegativeNumber/Positive_or_Negative_number.go
+go run ./SumofFirstNNaturalNumbers/SumofFirstNNaturalNumbers.go
 ```
